@@ -7,3 +7,78 @@ box-sizing: border-box;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 word-break: break-all;
 }
+body {
+    background-color: rgb(204, 204, 204);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "form" ".";
+    width: 100%;
+    padding: 20px;
+    row-gap: 20px;
+    column-gap: 40px;
+}
+    .container > .form {
+        display: inline-block;
+        grid-area: form;
+        background-color: yellow;
+    }
+        .container > .item {
+            
+            display: inline-block;
+            background-color: teal;
+            box-shadow: 0 2px 8px gray;
+        }
+        .container > .item > .deadline {
+            
+            display: inline-block;
+            background-color: teal;
+            box-shadow: 0 2px 8px gray;
+        }
+        .container > .item > .status{
+            
+            display: inline-block;
+            background-color: teal;
+            box-shadow: 0 2px 8px gray;
+            width: 50px;
+        }
+        .container > .item > .status.todo{
+            
+            background-color: greenyellow;
+        }
+        .container > .item > .status.in-progress{
+            
+            background-color: #cdd8bd;
+        }
+        .container > .item > .status.done{
+            
+            background-color: rgb(72, 112, 12);
+        }
+        .container > .item > .description{
+            
+            display: inline-block;
+            background-color: teal;
+            width: 100%;
+            font-size: 20px;
+        }
+
+@media ( min-width: 500px ) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "form form" ". .";
+    }
+}
+@media ( min-width: 800px ) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "form form form" ". . .";
+    }
+}
+@media ( min-width: 1300px ) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "form form form form" ". . . .";
+    }
+}
