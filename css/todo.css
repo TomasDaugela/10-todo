@@ -24,7 +24,7 @@ body {
     .container > .form {
         display: inline-block;
         grid-area: newTodo;
-        background-color: yellow;
+
     }
     .container > .item {
         display: inline-block;
