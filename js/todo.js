@@ -42,3 +42,19 @@ function actionRemoveTodoItem(event){
     
     
 }
+/*
+Remove all
+*/
+
+const BTNremoveAll = document.querySelector('.global-actions > .action.remove');
+
+BTNremoveAll.addEventListener('click', actionRemoveAllTodoItems);
+
+function actionRemoveAllTodoItems(event){
+    const allTodoItems = event.target.closest('.container').querySelectorAll('.item');
+
+    for (let i =0; i<allTodoItems.length; i++){
+        allTodoItems[i].remove();
+    }
+    
+}
